@@ -1,0 +1,148 @@
+{
+	"name":"Supply",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"thumbnail.png",
+	"pageTypes": [
+		"home",
+		"default"
+	],
+	"tags": {
+	    "en": ["minimal", "clean", "photography", "modern", "website", "creative", "unique", "media", "sans-serif"]
+	},
+	"colorSwatches": {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#e60000",
+            "color3":"#e60000",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#e60000",
+            "color7":"#e2e2e2"
+        },
+        "Swatch 2": {
+            "color1":"#fefefe",
+            "color2":"#6d3154",
+            "color3":"#002eb5",
+            "color4":"#451f35",
+            "color5":"#121212",
+            "color6":"#ffffff",
+            "color7":"#6d3154"
+        },
+        "Swatch 3": {
+            "color1":"#fefefe",
+            "color2":"#31646d",
+            "color3":"#5eb500",
+            "color4":"#1f3f45",
+            "color5":"#696969",
+            "color6":"#ffffff",
+            "color7":"#31646d"
+        },
+        "Swatch 4": {
+            "color1":"#fdfbfc",
+            "color2":"#8d344f",
+            "color3":"#b84367",
+            "color4":"#672639",
+            "color5":"#3c1621",
+            "color6":"#ffffff",
+            "color7":"#8d344f"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#214a8e",
+            "color3":"#fab702",
+            "color4":"#15294a",
+            "color5":"#0b1627",
+            "color6":"#ffffff",
+            "color7":"#214a8e"
+        }
+    },
+    "fontSwatch": {
+       "title": "Helvetica",
+        "font1": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "34px",
+            "font-weight": "400",
+            "line-height": "44px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "600",
+            "line-height": "26px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "13px",
+            "font-weight": "500",
+            "line-height": "23px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch6",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "@color-swatch4"
+         },
+        "font7": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch2",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font8": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "600",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}
