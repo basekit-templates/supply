@@ -11,49 +11,49 @@
 	},
 	"colorSwatches": {
         "Swatch 1": {
-            "color1":"#ffffff",
+            "color1":"#f9f9f9",
             "color2":"#e60000",
-            "color3":"#e60000",
+            "color3":"#ffffff",
             "color4":"#333333",
             "color5":"#333333",
             "color6":"#e60000",
-            "color7":"#e2e2e2"
+            "color7":"#f9f9f9"
         },
         "Swatch 2": {
-            "color1":"#fefefe",
-            "color2":"#6d3154",
-            "color3":"#002eb5",
-            "color4":"#451f35",
-            "color5":"#121212",
-            "color6":"#ffffff",
-            "color7":"#6d3154"
+            "color1":"#e1e1e1",
+            "color2":"#00cf2c",
+            "color3":"#e6e6e6",
+            "color4":"#2e2e2e",
+            "color5":"#2e2e2e",
+            "color6":"#00cf2c",
+            "color7":"#e1e1e1"
         },
         "Swatch 3": {
-            "color1":"#fefefe",
-            "color2":"#31646d",
-            "color3":"#5eb500",
-            "color4":"#1f3f45",
-            "color5":"#696969",
-            "color6":"#ffffff",
-            "color7":"#31646d"
+            "color1":"#fafafa",
+            "color2":"#efb400",
+            "color3":"#ffffff",
+            "color4":"#474747",
+            "color5":"#474747",
+            "color6":"#efb400",
+            "color7":"#fafafa"
         },
         "Swatch 4": {
-            "color1":"#fdfbfc",
-            "color2":"#8d344f",
-            "color3":"#b84367",
-            "color4":"#672639",
-            "color5":"#3c1621",
-            "color6":"#ffffff",
-            "color7":"#8d344f"
+            "color1":"#e8e8e8",
+            "color2":"#236db3",
+            "color3":"#eeeeee",
+            "color4":"#303030",
+            "color5":"#303030",
+            "color6":"#236db3",
+            "color7":"#e8e8e8"
         },
         "Swatch 5": {
-            "color1":"#ffffff",
-            "color2":"#214a8e",
-            "color3":"#fab702",
-            "color4":"#15294a",
-            "color5":"#0b1627",
-            "color6":"#ffffff",
-            "color7":"#214a8e"
+            "color1":"#fafafa",
+            "color2":"#db226f",
+            "color3":"#ffffff",
+            "color4":"#454545",
+            "color5":"#454545",
+            "color6":"#db226f",
+            "color7":"#fafafa"
         }
     },
     "fontSwatch": {
@@ -117,22 +117,22 @@
             "color": "@color-swatch2",
             "letter-spacing": "inherit",
             "color-hover": "@color-swatch2",
-            "background-color": "@color-swatch1",
-            "background-color-hover": "@color-swatch1"
+            "background-color": "lighten(@color-swatch1, 20%)",
+            "background-color-hover": "lighten(@color-swatch1, 20%)"
         },
         "font8": {
             "font-family": "\"Helvetica\", Arial, sans-serif",
-            "font-size": "32px",
+            "font-size": "36px",
             "font-weight": "400",
-            "line-height": "42px",
+            "line-height": "46px",
             "color": "@color-swatch6",
             "letter-spacing": "inherit"
         },
         "font9": {
             "font-family": "\"Helvetica\", Arial, sans-serif",
-            "font-size": "14px",
-            "font-weight": "600",
-            "line-height": "26px",
+            "font-size": "22px",
+            "font-weight": "400",
+            "line-height": "32px",
             "color": "@color-swatch6",
             "letter-spacing": "inherit"
         },

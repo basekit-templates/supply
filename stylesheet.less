@@ -60,7 +60,37 @@
 /*	===============================
 	Template Styles
 	=============================== */
+	
+// TEST
 
+.swatch1 {
+	color: @color-swatch1;
+}
+.swatch2 {
+	color: @color-swatch2;
+}
+.swatch3 {
+	color: @color-swatch3;
+}
+.swatch4 {
+	color: @color-swatch4;
+}
+.swatch5 {
+	color: @color-swatch5;
+}
+.swatch6 {
+	color: @color-swatch6;
+}
+.swatch7 {
+	color: @color-swatch7;
+}
+
+// Mixins
+@borders-blocks: darken(@color-swatch1, 5%);
+@borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
+@borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
+@background-blocks: lighten(@color-swatch1, 20%);
+@text-links-hover: darken(@color-swatch6, 20%);
 
 // 1. Globals
 html, body {
@@ -86,6 +116,7 @@ h1 {
 		line-height:@font-swatch1-line-height; 
 		letter-spacing: @font-swatch1-letter-spacing; 
 		font-size: @font-swatch1-font-size;
+		color: @color-swatch2;
 	}
 }
 
@@ -102,10 +133,7 @@ h2 {
 		line-height:@font-swatch2-line-height; 
 		letter-spacing: @font-swatch2-letter-spacing; 
 		font-size: @font-swatch2-font-size;
-		-webkit-transition: .2s;
-		-moz-transition: .2s;
-		-ms-transition: .2s;
-		transition: .2s;
+		color: @color-swatch2;
 	}
 }
 
@@ -116,16 +144,13 @@ h3 {
 	line-height:@font-swatch3-line-height; 
 	letter-spacing: @font-swatch3-letter-spacing; 
 	font-size: @font-swatch3-font-size;
-	
-	border-bottom: 1px solid fadeout(@color-swatch2, 75%);
-	padding-bottom: 1px;
-	margin-bottom: 10px;
 	a {
 		font-family:@font-swatch3-font-family; 
 		font-weight: @font-swatch3-font-weight; 
 		line-height:@font-swatch3-line-height; 
 		letter-spacing: @font-swatch3-letter-spacing; 
 		font-size: @font-swatch3-font-size;
+		color: @color-swatch2;
 	}
 }
 
@@ -142,6 +167,7 @@ h4 {
 		line-height:@font-swatch4-line-height; 
 		letter-spacing: @font-swatch4-letter-spacing; 
 		font-size: @font-swatch4-font-size;
+		color: @color-swatch2;
 	}
 }
 
@@ -158,6 +184,7 @@ h5, .ecom-product-price {
 		line-height:@font-swatch5-line-height;
 		letter-spacing: @font-swatch5-letter-spacing;
 		font-size: @font-swatch5-font-size;
+		color: @color-swatch2;
 	}
 }
 
@@ -174,6 +201,7 @@ h6 {
 		line-height:@font-swatch6-line-height;
 		letter-spacing: @font-swatch6-letter-spacing;
 		font-size: @font-swatch6-font-size;
+		color: @color-swatch2;
 	}
 }
 
@@ -190,6 +218,7 @@ h6 {
 		line-height:@font-swatch10-line-height;
 		letter-spacing: @font-swatch10-letter-spacing;
 		font-size: @font-swatch10-font-size;
+		color: @color-swatch2;
 	}	
 }
 
@@ -222,12 +251,14 @@ blockquote {
 a,
 .widget.twitter a,
 .widget.twitter ul li a,
-.widget.twitter ul li span a {
-	color: @color-swatch3; 
+.widget.twitter ul li span a,
+.ecom-productlist-info h2 a,
+.widget.companyname a {
+	color: @color-swatch2; 
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
-		color: darken(@color-swatch3, 10%);
+		color: @text-links-hover;
 	}
 }
 
@@ -254,8 +285,13 @@ button.btn,
 .widget.profile .bk-profile-socialicons span a,
 .widget.feature .feature-bgimg .content button,
 .template-footer .widget.profile .bk-profile-socialicons span a,
-.blog-search-form button {
-	border: 1px solid @color-swatch7;
+.blog-search-form button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecomcheckout table tr td .checkout-quantitybtn button,
+.widget.ecomcheckout .checkout-order-button {
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid @borders-buttons;
 	background-color: @font-swatch7-background-color;
 	-webkit-appearance: none;
 	font-family:@font-swatch7-font-family;
@@ -271,20 +307,29 @@ button.btn,
 	-ms-transition: .2s;
 	transition: .2s;
 	&:hover {
-		border-color: darken(@color-swatch7, 20%);
-	}	
+		border-color: @borders-buttons-hover;
+		color: @text-links-hover;
+		background-color: @font-swatch7-background-color-hover;
+	}
 }
 
 button:disabled,
 button.btn:disabled:hover,
 .widget.ecomcheckout .checkout-order-button:disabled {
-	background-color: darken(@color-swatch1, 10%);
-	border-color: darken(@color-swatch1, 10%);
+	background-color: @borders-blocks;
+	border-color: @borders-blocks;
 	color: @color-swatch1;
+	cursor: not-allowed;
 	&:hover {
-		border-color: darken(@color-swatch1, 10%);
-		background-color: darken(@color-swatch1, 10%);
+		background-color: @borders-blocks;
+		border-color: @borders-blocks;
+		color: @color-swatch1;
 	}
+}
+
+.widget.ecomcheckout table tr td .checkout-quantitybtn {
+	border: 1px solid @borders-blocks;
+	background: @background-blocks;
 }
 
 .clicktocall a {
@@ -315,18 +360,15 @@ textarea,
 .widget.profile form fieldset input {
 	text-indent: 0;
 	padding: 8px 9px 10px;
-	background-color: @color-swatch1;
-	border: 1px solid darken(@color-swatch1, 10%);
+	background-color: @background-blocks;
+	border: 1px solid @borders-blocks;
 	outline: none;
 	-webkit-transition: border .2s;
 	-moz-transition: border .2s;
 	-ms-transition: border .2s;
 	transition: border .2s;
-	&:hover {
-		border: 1px solid darken(@color-swatch1, 20%);
-	}
-	&:focus {
-		border: 1px solid darken(@color-swatch1, 20%);
+	&:hover, &:focus {
+		border: 1px solid darken(@borders-blocks, 20%);
 	}
 }
 
@@ -368,13 +410,18 @@ input[type="search"]::-webkit-search-decoration {
 
 .template-footer .widget.profile .bk-profile-socialicons span {
 	background-color: @color-swatch3;
-	margin: 0 5px 5px;
+	margin-right: 5px;
 	a {
 		background-color: @color-swatch3;
 		margin: 0;
 	}
-	&:hover, &:hover a {
-		background-color: darken(@color-swatch3, 10%);
+}
+
+.template-footer {
+	h3 {
+		border-bottom: 1px solid @borders-blocks;
+		padding-bottom: 1px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -392,6 +439,7 @@ input[type="search"]::-webkit-search-decoration {
 // Header
 .template-header {
 	padding-top: 30px;
+	background-color: @color-swatch7;
 }
 
 .widget.companyname {
@@ -413,10 +461,11 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget.feature {
+	text-align: center;
 	h2, h3 {
-		color: @color-swatch6;
+		color: @color-swatch1;
+		text-shadow: 0 0 10px fadeout(@color-swatch5, 50%);
 		span {
-			background-color: darken(@color-swatch5, 20%);
 			padding: 4px 15px 8px;
 		}
 	}
@@ -449,7 +498,8 @@ input[type="search"]::-webkit-search-decoration {
 
 //  Navigation
 .template-nav {
-	border: solid 1px @color-swatch7;
+	border: solid 1px @borders-blocks;
+	background-color: @background-blocks;
 }
 
 .widget .extendednavigation {
@@ -457,7 +507,8 @@ input[type="search"]::-webkit-search-decoration {
 		padding: 0;
 	}
 	ul li:hover ul {
-		border: solid 1px @color-swatch7;
+		border: solid 1px @borders-blocks;
+		background-color: @background-blocks;
 		border-top: 0;
 		top: 55px;
 		left: -1px;
@@ -466,10 +517,10 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	ul li a:hover, ul li.folder:hover > .text, ul li ul a:hover .text, ul li.folder .text:hover {
-		color: darken(@color-swatch6, 20%);
+		color: @text-links-hover;
 	}
 	ul li.folder:hover:after {
-		border-top-color: darken(@color-swatch6, 20%);
+		border-top-color: @text-links-hover;
 	}
 	> ul > li {
 		a, &.folder {
@@ -499,45 +550,30 @@ input[type="search"]::-webkit-search-decoration {
 .ecom-productslist-product {
 	overflow: hidden;
 	position: relative;
-	.ecom-productlist-info {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		h2 {
-			line-height:bkscale(@font-swatch3-line-height, 0.9); 
-			font-size: bkscale(@font-swatch3-font-size, 0.9);
-			position: absolute;
-			top: 10px;
-			left: 0;
-			background-color: @color-swatch2;
-			padding: 7px 10px 8px;
-			a {
-				color: @color-swatch6;
-				line-height: inherit; 
-				font-size: inherit;
-				display: inline-block;
-				-webkit-transition: .2s;
-				-moz-transition: .2s;
-				-ms-transition: .2s;
-				transition: .2s;
-				&:hover {
-					padding-left: 4px;
-				}
-			}
-		}
-		.ecom-productlist-price {
-			font-family: @font-swatch7-font-family;
-			position: absolute;
-			bottom: 10px;
-			left: 0;
-			background-color: @color-swatch4;
+	border: 1px solid @borders-blocks;
+	background-color: @background-blocks;
+}
+.ecom-productlist-info {
+	min-height: 120px;
+	padding: 16px 20px;
+	h2 {
+		line-height:bkscale(@font-swatch3-line-height, 0.7); 
+		font-size: bkscale(@font-swatch3-font-size, 0.7);
+		a {
 			color: @color-swatch6;
-			padding: 7px 10px 8px;
+			line-height: inherit; 
+			font-size: inherit;
+			-webkit-transition: .2s;
+			-moz-transition: .2s;
+			-ms-transition: .2s;
+			transition: .2s;
 		}
 	}
+	.ecom-productlist-price {
+		font-family: @font-swatch7-font-family;
+	}
 }
+
 
 // Page
 .home-feature {
@@ -697,13 +733,15 @@ input[type="search"]::-webkit-search-decoration {
 .blog-post-feature-image-wrap {
 	height: 200px;
 	background-size: cover;
+	background-position: center;
 	img {
 		display: none;
 	}
 }
 
 .menu-subsection {
-	background: desaturate(lighten(@color-swatch3, 45%), 50%);
+	border: 1px solid @borders-blocks;
+	background-color: @background-blocks;
 	&:before, &:after {
 		width: 90px;
 	}
@@ -718,16 +756,15 @@ input[type="search"]::-webkit-search-decoration {
 .menu .menu-section-item-dietary-props .dietary-icon,
 .menu .menu-info .dietary-icon,
 .dietary-icon {
-	background: desaturate(lighten(@color-swatch3, 35%), 35%);
-	margin-left: 7px;
+	border: 1px solid @borders-blocks;
+	background-color: @background-blocks;
+	margin-right: 7px;
 	padding: 0 4px;
 }
 
 .menu-name-background,
 .menu-subsection-promoted h2,
 .menu-subsection-promoted h3 {
-	background-color: @color-swatch2;
-	padding: 7px 10px 8px;
 	display: inline-block;
 	h1 {
 		padding-bottom: 0;
@@ -741,19 +778,6 @@ input[type="search"]::-webkit-search-decoration {
 	color: @color-swatch6;
 }
 
-.menu-subsection-promoted h3 {
-	margin: 0 13px;
-	&:before, &:after {
-		width: 23px;
-	}
-}
-
-.menu-subsection-promoted h2 {
-	&:before, &:after {
-		width: 23px;
-	}
-}
-
 // Blog
 .blog-post-feature-image-wrap {
 	height: 400px;
@@ -761,12 +785,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .blog-post-metadata {
-	background: desaturate(lighten(@color-swatch3, 60%), 65%);
 	padding: 12px 18px 14px;
 	margin-top: 15px;
-	&:before, &:after {
-		width: 23px;
-	}
 }
 
 .blog-post-item {
@@ -781,6 +801,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.ecomcheckout table tr td .checkout-quantitybtn button {
 	-webkit-font-smoothing: antialiased;
+	padding: 0;
 }
 
 .widget.ecomcheckout table tr td .checkout-quantitybtn button {
@@ -790,19 +811,10 @@ input[type="search"]::-webkit-search-decoration {
 .template-nav .widget.ecombasket {
 	display: inline;
 	float: right;
-	.ecombasket-pull {
-		display: inline;
-		background-color: transparent;
-		p {
-			background-color: @color-swatch4;
-		}
-		p, .basket-count {
-			color: @color-swatch1;
-			display: inline-block;
-			&:hover {
-				background-color: @color-swatch2;
-			}
-		}
+	.ecombasket-list-container {
+		left: auto;
+		right: -1px;
+		border-top: 0;
 	}
 }
 
@@ -810,130 +822,162 @@ input[type="search"]::-webkit-search-decoration {
 	.ecombasket-pull {
 		width: auto;
 		padding: 0;
+		display: inline-block;
+		background-color: transparent;
 		p {
-			background-color: @font-swatch7-background-color;
+			display: inline-block;
+			color: @color-swatch1;
+			background-color: @color-swatch2;
 			padding: 14px 20px 15px;
 			&:hover {
-				background-color: darken(@font-swatch7-background-color, 5%);
+				background-color: darken(@color-swatch2, 10%);
 			}	
 		}
-	}
+		.basket-count {
+			color: @color-swatch1;
+		}
+ 	}
 	.ecombasket-list-container ul li {
-		border-bottom: 1px solid darken(@color-swatch1, 20%);
+		border-bottom: 1px solid @borders-blocks;
 	}
 }
 
 .ecombasket-list-container {
+	z-index: 1;
 	position: absolute;
-	top: 36px;
-	right: 0;
+	top: 100%;
+	left: -1px;
 	background: white;
 	padding: 10px;
-	border: 1px solid purple;
-	border-top: 0;
+	border: 1px solid @borders-blocks;
 	width: 260px;
+}
+
+.widget.ecomcheckout table tr th, .widget.ecomcheckout table tr td {
+	border-bottom: 1px solid @borders-blocks;
+}
+
+// Content
+.widget.content {
+	clear: both;
 }
 
 // Misc
 /* SVG Icons */
-.svg .page-wrap .widget.socialicons span.bk-socialicons-twitter a,
-.svg .page-wrap .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+.svg .widget.socialicons span.bk-socialicons-twitter a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
 	background-image: image('/images/social/socialicons-twitter.svg');
 }
 
-.svg .page-wrap .widget.socialicons span.bk-socialicons-linkedin a,
-.svg .page-wrap .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+.svg .widget.socialicons span.bk-socialicons-linkedin a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
 	background-image: image('/images/social/socialicons-linkedin.svg')
 }
 
-.svg .page-wrap .widget.socialicons span.bk-socialicons-facebook a,
-.svg .page-wrap .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+.svg .widget.socialicons span.bk-socialicons-facebook a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
 	background-image: image('/images/social/socialicons-facebook.svg')
 }
 
-.svg .page-wrap .widget.socialicons span.bk-socialicons-rss a,
-.svg .page-wrap .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+.svg .widget.socialicons span.bk-socialicons-rss a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
 	background-image: image('/images/social/socialicons-rss.svg')
 }
 
-.svg .page-wrap .widget.socialicons span.bk-socialicons-googleplus a,
-.svg .page-wrap .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+.svg .widget.socialicons span.bk-socialicons-googleplus a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
 	background-image: image('/images/social/socialicons-googleplus.svg')
 }
 
-.svg .page-wrap .widget.socialicons span.bk-socialicons-youtube a,
-.svg .page-wrap .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+.svg .widget.socialicons span.bk-socialicons-youtube a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
 	background-image: image('/images/social/socialicons-youtube.svg')
 }
 
-.svg .page-wrap .widget.paypalbuynow .widget.button.paypal {
+.svg .widget.paypalbuynow .widget.button.paypal {
 	background-image: image('/images/social/socialicons-paypal.svg')
 }
-.svg .page-wrap .widget.tweet a {
+.svg .widget.tweet a {
 	background-image: image('/images/social/socialicons-twitter.svg')
 }
-.svg .page-wrap .widget.dropbox button {
+.svg .widget.dropbox button {
 	background-image: image('/images/social/socialicons-dropbox.svg')
 }
 	
 /* PNG Icons */
-.page-wrap {	
-	.widget.socialicons span.bk-socialicons-twitter a,
-	.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-		background-image: image('/images/social/socialicons-twitter.png');
-	}
-	
-	.widget.socialicons span.bk-socialicons-linkedin a,
-	.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-		background-image: image('/images/social/socialicons-linkedin.png')
-	}
-	
-	.widget.socialicons span.bk-socialicons-facebook a,
-	.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-		background-image: image('/images/social/socialicons-facebook.png')
-	}
-	
-	.widget.socialicons span.bk-socialicons-rss a,
-	.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-		background-image: image('/images/social/socialicons-rss.png')
-	}
-	
-	.widget.socialicons span.bk-socialicons-googleplus a,
-	.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-		background-image: image('/images/social/socialicons-googleplus.png')
-	}
-	
-	.widget.socialicons span.bk-socialicons-youtube a,
-	.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-		background-image: image('/images/social/socialicons-youtube.png')
-	}
-	
-	.widget.paypalbuynow .widget.button.paypal {
-		background-image: image('/images/social/socialicons-paypal.png')
-	}
-	.widget.tweet a {
-		background-image: image('/images/social/socialicons-twitter.png')
-	}
-	.widget.dropbox button {
-		background-image: image('/images/social/socialicons-dropbox.png')
-	}
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+	background-image: image('/images/social/socialicons-twitter.png');
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+	background-image: image('/images/social/socialicons-linkedin.png')
+}
+
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+	background-image: image('/images/social/socialicons-facebook.png')
+}
+
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+	background-image: image('/images/social/socialicons-rss.png')
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+	background-image: image('/images/social/socialicons-googleplus.png')
+}
+
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+	background-image: image('/images/social/socialicons-youtube.png')
+}
+
+.widget.paypalbuynow .widget.button.paypal {
+	background-image: image('/images/social/socialicons-paypal.png')
+}
+.widget.tweet a {
+	background-image: image('/images/social/socialicons-twitter.png')
+}
+.widget.dropbox button {
+	background-image: image('/images/social/socialicons-dropbox.png')
 }
 
 @media @tablet {
 	.header-logo {
 		padding-top: 10px;
 	}
-	.widget .extendednavigation a.pull:after {
-		right: 7px;
-		background-color: @color-swatch2;
-		box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+	.widget .extendednavigation a.pull {
+		left: 10px;
+		right: auto;
+		top: 19px;
+		&:after {
+			right: 7px;
+			background-color: @color-swatch2;
+			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+		}
 	}
-	.template-nav:before {
-		display: none;
+	.template-nav {
+		position: relative;
+		min-height: 57px;
+		&:before {
+			display: none;
+		}
+		.widget.ecombasket {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
 	.widget .extendednavigation {
+		ul {
+			padding-top: 56px;
+		}
 		ul li {
 			padding: 0;
+			border-bottom: 1px solid @borders-blocks;
 		}
 		> ul > li {
 			border-right: 0;
@@ -949,15 +993,8 @@ input[type="search"]::-webkit-search-decoration {
 				}
 			}
 		}
-		ul {
-			padding: 0;
-		}
 	}
 	.widget.companyname {
-		text-align: center;
-		&:after {
-			display: none;
-		}
 	}
 	.page-wrap {
 		padding: 20px;
