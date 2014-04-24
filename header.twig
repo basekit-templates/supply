@@ -1,11 +1,8 @@
 <header class="template-header container">
 	<div class="row">
-		<div class="header-title span-9">
+		<div class="header-title span-12">
 			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.svg')})|raw}}
 			{{widget('companyname', 'companyname', {"business": "Supply"})|raw}}
-		</div>
-		<div class="header-twitter span-3">
-			{{widget('button', 'buttonwidget', {italic: false, text:'@SupplyTweets', action: external, url: 'http://twitter.com'})|raw}}
 		</div>
 		<nav class="template-nav span-12">
 			{{widget('extendednavigation', 'navigationheader', {})|raw}}
