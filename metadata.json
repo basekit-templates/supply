@@ -117,8 +117,8 @@
             "color": "@color-swatch2",
             "letter-spacing": "inherit",
             "color-hover": "@color-swatch2",
-            "background-color": "lighten(@color-swatch1, 20%)",
-            "background-color-hover": "lighten(@color-swatch1, 20%)"
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch3"
         },
         "font8": {
             "font-family": "\"Helvetica\", Arial, sans-serif",
