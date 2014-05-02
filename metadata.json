@@ -4,7 +4,8 @@
 	"screenshot":"thumbnail.png",
 	"pageTypes": [
 		"home",
-		"default"
+		"default",
+		"ecomcheckout"
 	],
 	"tags": {
 	    "en": ["minimal", "clean", "photography", "modern", "website", "creative", "unique", "media", "sans-serif"]
