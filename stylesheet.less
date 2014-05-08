@@ -431,7 +431,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget.companyname {
-	padding: 6px 12px 7px;
+	padding: 6px 0 7px;
+	float: left;
 }
 
 .widget.logo {
@@ -1074,6 +1075,24 @@ input[type="search"]::-webkit-search-decoration {
 		.ecom-productslist-product,
 		.ecom-productslist-products {
 			margin-left: 0;
+			width: 100%;
+		}
+	}
+	.productlist-display-form {
+		label {
+			display: inline-block;
+			width: 19%;
+		}
+		select {
+			width: 80%;
+		}
+	}
+}
+
+// Mobile
+@media @mobile {
+	.productlist-display-form {
+		select, label {
 			width: 100%;
 		}
 	}
