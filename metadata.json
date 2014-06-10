@@ -3,11 +3,7 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
 	"templateType":"ecommerce",
-	"pageTypes": [
-		"home",
-		"default",
-		"ecomcheckout"
-	],
+	
 	"tags": {
 	    "en": ["minimal", "clean", "photography", "modern", "website", "creative", "unique", "media", "sans-serif"]
 	},
