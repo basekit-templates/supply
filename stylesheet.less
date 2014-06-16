@@ -540,6 +540,11 @@ input[type="search"]::-webkit-search-decoration {
 		border-bottom: none;
 	}
 }
+
+.widget.ecomproductslist .productlist-filter {
+	margin-left: 0;
+}
+
 .widget.ecomproductslist .ecom-productslist-product {
 	padding: 0;
 }
@@ -858,6 +863,13 @@ input[type="search"]::-webkit-search-decoration {
 	border-bottom: 1px solid @borders-blocks;
 }
 
+.productlist-search input[type=search] {
+	@media @mobile {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
 .widget.ecomproductslist .ecom-productslist-product {
 	margin-right: 0;
 	zoom: 1;
@@ -894,6 +906,13 @@ input[type="search"]::-webkit-search-decoration {
 	padding: 7px 0;
 }
 
+.widget.ecomproduct .ecom-product .added .text:before {
+    content: "\2713";
+    background-image: none !important;
+    color: white;
+    top: 0;
+}
+
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
 	background-image: image('/images/icon-basket.png');
 	height: 15px;
@@ -906,6 +925,41 @@ input[type="search"]::-webkit-search-decoration {
 		background-image: image('/images/icon-basket.svg');
 	}
 }
+.widget.ecomfeaturedproducts {
+    .ecom-featuredproducts-header h2 {
+        padding: 1em 0;
+    }
+    .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+    	overflow: hidden;
+		position: relative;
+		border: 1px solid @borders-blocks;
+		background-color: @background-blocks;
+		padding: 0;
+        a:hover {
+            color: @color-swatch2;
+        }
+        .ecom-featuredproducts-image-wrap {
+            background-color: @background-blocks;
+			border-bottom: 1px solid @borders-blocks;
+        }
+        .ecom-featuredproducts-info {
+        	min-height: 120px;
+			padding: 16px 20px;
+            .ecom-featuredproducts-title {
+                line-height:bkscale(@font-swatch3-line-height, 0.7); 
+				font-size: bkscale(@font-swatch3-font-size, 0.7);
+				-webkit-transition: .2s;
+				-moz-transition: .2s;
+				-ms-transition: .2s;
+				transition: .2s;
+            }
+            .ecom-featuredproducts-price {
+                font-family: @font-swatch7-font-family;
+            }
+        }
+    }
+}
+
 
 // Content
 .widget.content {
