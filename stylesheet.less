@@ -21,7 +21,7 @@
 
 /*	===============================
 	Colour Swatches
-	===============================	
+	===============================
 	"color1": == Background
 	"color2": == Contrast colour
 	"color3": == Button colour
@@ -33,7 +33,7 @@
 
 /*	===============================
 	Font Swatches
-	===============================	
+	===============================
 	"font1":  == Heading 1
 	"font2":  == Heading 2
 	"font3":  == Heading 3
@@ -80,68 +80,68 @@ html, body {
 }
 
 h1 {
-	font-family:@font-swatch1-font-family; 
-	font-weight: @font-swatch1-font-weight; 
-	color:@font-swatch1-color; 
-	line-height:@font-swatch1-line-height; 
-	letter-spacing: @font-swatch1-letter-spacing; 
+	font-family:@font-swatch1-font-family;
+	font-weight: @font-swatch1-font-weight;
+	color:@font-swatch1-color;
+	line-height:@font-swatch1-line-height;
+	letter-spacing: @font-swatch1-letter-spacing;
 	font-size: @font-swatch1-font-size;
 	a {
-		font-family:@font-swatch1-font-family; 
-		font-weight: @font-swatch1-font-weight; 
-		line-height:@font-swatch1-line-height; 
-		letter-spacing: @font-swatch1-letter-spacing; 
+		font-family:@font-swatch1-font-family;
+		font-weight: @font-swatch1-font-weight;
+		line-height:@font-swatch1-line-height;
+		letter-spacing: @font-swatch1-letter-spacing;
 		font-size: @font-swatch1-font-size;
 		color: @color-swatch2;
 	}
 }
 
 h2 {
-	font-family:@font-swatch2-font-family; 
-	font-weight: @font-swatch2-font-weight; 
-	color:@font-swatch2-color; 
-	line-height:@font-swatch2-line-height; 
-	letter-spacing: @font-swatch2-letter-spacing; 
+	font-family:@font-swatch2-font-family;
+	font-weight: @font-swatch2-font-weight;
+	color:@font-swatch2-color;
+	line-height:@font-swatch2-line-height;
+	letter-spacing: @font-swatch2-letter-spacing;
 	font-size: @font-swatch2-font-size;
 	a {
-		font-family:@font-swatch2-font-family; 
-		font-weight: @font-swatch2-font-weight; 
-		line-height:@font-swatch2-line-height; 
-		letter-spacing: @font-swatch2-letter-spacing; 
+		font-family:@font-swatch2-font-family;
+		font-weight: @font-swatch2-font-weight;
+		line-height:@font-swatch2-line-height;
+		letter-spacing: @font-swatch2-letter-spacing;
 		font-size: @font-swatch2-font-size;
 		color: @color-swatch2;
 	}
 }
 
 h3 {
-	font-family:@font-swatch3-font-family; 
-	font-weight: @font-swatch3-font-weight; 
-	color:@font-swatch3-color; 
-	line-height:@font-swatch3-line-height; 
-	letter-spacing: @font-swatch3-letter-spacing; 
+	font-family:@font-swatch3-font-family;
+	font-weight: @font-swatch3-font-weight;
+	color:@font-swatch3-color;
+	line-height:@font-swatch3-line-height;
+	letter-spacing: @font-swatch3-letter-spacing;
 	font-size: @font-swatch3-font-size;
 	a {
-		font-family:@font-swatch3-font-family; 
-		font-weight: @font-swatch3-font-weight; 
-		line-height:@font-swatch3-line-height; 
-		letter-spacing: @font-swatch3-letter-spacing; 
+		font-family:@font-swatch3-font-family;
+		font-weight: @font-swatch3-font-weight;
+		line-height:@font-swatch3-line-height;
+		letter-spacing: @font-swatch3-letter-spacing;
 		font-size: @font-swatch3-font-size;
 		color: @color-swatch2;
 	}
 }
 
 h4 {
-	font-family:@font-swatch4-font-family; 
-	font-weight: @font-swatch4-font-weight; 
-	color:@font-swatch4-color; 
-	line-height:@font-swatch4-line-height; 
-	letter-spacing: @font-swatch4-letter-spacing; 
+	font-family:@font-swatch4-font-family;
+	font-weight: @font-swatch4-font-weight;
+	color:@font-swatch4-color;
+	line-height:@font-swatch4-line-height;
+	letter-spacing: @font-swatch4-letter-spacing;
 	font-size: @font-swatch4-font-size;
 	a {
-		font-family:@font-swatch4-font-family; 
-		font-weight: @font-swatch4-font-weight; 
-		line-height:@font-swatch4-line-height; 
-		letter-spacing: @font-swatch4-letter-spacing; 
+		font-family:@font-swatch4-font-family;
+		font-weight: @font-swatch4-font-weight;
+		line-height:@font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
 		font-size: @font-swatch4-font-size;
 		color: @color-swatch2;
 	}
@@ -195,7 +195,7 @@ h6 {
 		letter-spacing: @font-swatch10-letter-spacing;
 		font-size: @font-swatch10-font-size;
 		color: @color-swatch2;
-	}	
+	}
 }
 
 p,
@@ -213,9 +213,10 @@ select {
 
 blockquote {
 	font-style: italic;
-	font-size: bkscale(@font-swatch5-font-size, 1.2);
-	line-height: bkscale(@font-swatch5-line-height, 1.2);
+	font-size: @font-swatch5-font-size + 5px;
+	line-height: @font-swatch5-line-height + 5px;
 	background-color: @color-swatch3;
+	color: lighten(@color-swatch2, 20%);
 	&:before {
 		left: 8px;
 		color: @color-swatch2;
@@ -224,7 +225,7 @@ blockquote {
 
 a, .ecom-productlist-info h2 a,
 .widget.companyname a {
-	color: @color-swatch2; 
+	color: @color-swatch2;
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
@@ -414,7 +415,7 @@ textarea {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-     
+
 
       label {
         // Flex
@@ -651,11 +652,11 @@ input[type="search"]::-webkit-search-decoration {
 	min-height: 120px;
 	padding: 16px 20px;
 	h2 {
-		line-height:bkscale(@font-swatch3-line-height, 0.7); 
+		line-height:bkscale(@font-swatch3-line-height, 0.7);
 		font-size: bkscale(@font-swatch3-font-size, 0.7);
 		a {
 			color: @color-swatch6;
-			line-height: inherit; 
+			line-height: inherit;
 			font-size: inherit;
 			-webkit-transition: .2s;
 			-moz-transition: .2s;
@@ -943,7 +944,7 @@ input[type="search"]::-webkit-search-decoration {
 			padding: 14px 20px 15px;
 			&:hover {
 				background-color: darken(@color-swatch2, 10%);
-			}	
+			}
 		}
 		.basket-count {
 			color: @color-swatch1;
@@ -1032,7 +1033,7 @@ input[type="search"]::-webkit-search-decoration {
                     display: block;
                     padding: 10px 0 0 0;
                 }
-            }            
+            }
         }
 
         // Table Head
@@ -1155,7 +1156,7 @@ input[type="search"]::-webkit-search-decoration {
                         box-shadow: none;
 
                         &:hover {
-                            background-color: lighten(@color-swatch3,10%); 
+                            background-color: lighten(@color-swatch3,10%);
                         }
 
                         @media @mobile {
@@ -1262,7 +1263,7 @@ input[type="search"]::-webkit-search-decoration {
 	margin-left: 0;
 }
 
-.widget.ecomproductslist .productlist-display-form, 
+.widget.ecomproductslist .productlist-display-form,
 .widget.ecomproductslist .productlist-item-count {
 	zoom: 1;
 	margin-left: 1.33%;
@@ -1327,7 +1328,7 @@ input[type="search"]::-webkit-search-decoration {
         	min-height: 120px;
 			padding: 16px 20px;
             .ecom-featuredproducts-title {
-                line-height:bkscale(@font-swatch3-line-height, 0.7); 
+                line-height:bkscale(@font-swatch3-line-height, 0.7);
 				font-size: bkscale(@font-swatch3-font-size, 0.7);
 				-webkit-transition: .2s;
 				-moz-transition: .2s;
@@ -1388,7 +1389,7 @@ input[type="search"]::-webkit-search-decoration {
 .svg .widget.dropbox button {
 	background-image: image('/images/social/socialicons-dropbox.svg')
 }
-	
+
 /* PNG Icons */
 .widget.socialicons span.bk-socialicons-twitter a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
@@ -1434,7 +1435,7 @@ input[type="search"]::-webkit-search-decoration {
 	.page-wrap, .template-header, .template-footer {
 		padding-left: 20px;
 		padding-right: 20px;
-	}	
+	}
 }
 
 // Mobile
@@ -1512,7 +1513,7 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	.widget.ecomproductslist {
-		.productlist-display-form, 
+		.productlist-display-form,
 		.productlist-item-count,
 		.ecom-productslist-product,
 		.ecom-productslist-products {
@@ -1554,7 +1555,7 @@ input[type="search"]::-webkit-search-decoration {
       min-height: @twitterProfilePicSize;
       margin-bottom: 20px;
       padding-bottom: 0;
-     
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -1578,11 +1579,11 @@ input[type="search"]::-webkit-search-decoration {
         position: absolute;
         left: 0;
         top: 0;
-        
+
         @media @mobile {
           width: (@twitterProfilePicSize * 0.45);
           height: (@twitterProfilePicSize * 0.45);
-          
+
         }
         img {
           width: 100%;
@@ -1593,7 +1594,7 @@ input[type="search"]::-webkit-search-decoration {
       .twitter-content {
         line-height: 1.2em;
         margin-left: (@twitterProfilePicSize + 20);
-       
+
         @media @mobile {
           margin-left: (@twitterProfilePicSize * 0.55 + 12);
         }
@@ -1601,7 +1602,7 @@ input[type="search"]::-webkit-search-decoration {
             display: inline-block;
             font-family: @font-swatch4-font-family;
             font-size: @font-swatch5-font-size;
-           color: @color-swatch2; 
+           color: @color-swatch2;
           @media @mobile {
             font-size: bkscale(@font-swatch5-font-size, 0.8);
           }
@@ -1615,7 +1616,7 @@ input[type="search"]::-webkit-search-decoration {
           }
           a {
             font-family: @font-swatch5-font-family;
-            color: @color-swatch2; 
+            color: @color-swatch2;
           }
         }
         p, p a {
