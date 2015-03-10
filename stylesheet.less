@@ -848,10 +848,6 @@ input[type="search"]::-webkit-search-decoration {
 	border: 1px solid @borders-blocks;;
 }
 
-
-
-
-
 .template-nav .widget.ecombasket {
 	display: inline;
 	float: right;
@@ -922,6 +918,9 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.widget.ecomproduct .ecom-product .ecom-product-cattag {
+	margin: 10px 0 10px;
+}
 
 
 /* ===============================
@@ -1475,6 +1474,9 @@ input[type="search"]::-webkit-search-decoration {
 	&:after {
 		color: @color-swatch5;
 		content: ",";
+	}
+	&:last-of-type:after {
+		content: "";
 	}
 }
 
