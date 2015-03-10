@@ -3,9 +3,11 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
 	"templateType":"ecommerce",
-    "pageTypes": ["home"],
+	"pageTypes": ["home"],
 	"tags": {
-	    "en": ["minimal", "clean", "photography", "modern", "website", "creative", "unique", "media", "sans-serif"]
+		"en": ["trade", "construction", "build", "DIY"],
+		"es": ["comercio", "construcción", "construcción", "bricolaje"],
+		"pt": ["comércio", "construção", "construção", "DIY"]
 	},
 	"colorSwatches": {
         "Swatch 1": {

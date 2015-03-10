@@ -237,6 +237,7 @@ a, .ecom-productlist-info h2 a,
 .contactform button.btn,
 button.btn,
 .btn,
+.expand,
 .widget.profile form button,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
@@ -423,6 +424,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .productlist-filter label {
 	margin-right: @font-swatch5-font-size - 7px;
+	display: block;
 }
 
 .form-group {
@@ -512,6 +514,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget .extendednavigation {
+	.clearfix;
 	li > .text {
 		padding: 0;
 	}
@@ -1254,6 +1257,10 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.productlist-pagination {
+	.clearfix;
+}
+
 
 // Content
 .widget.content {
@@ -1444,6 +1451,19 @@ input[type="search"]::-webkit-search-decoration {
 		select {
 			width: 80%;
 		}
+	}
+}
+
+.widget.ecomproductslist .ecom-productslist-image {
+	display: none !important; // I know this is bad, but there's an inline style that made me do this
+	background-image: image('/images/placeholder.png');
+	background-size: cover;
+}
+
+.ecom-product-tag-link {
+	&:after {
+		color: @color-swatch5;
+		content: ",";
 	}
 }
 
