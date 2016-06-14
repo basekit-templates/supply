@@ -1,7 +1,7 @@
 {
 	"name":"Supply",
 	"thumbnail":"thumbnail.png",
-	"screenshot":"thumbnail.png",
+	"screenshot":"supply-screenshot.jpg",
 	"templateType":"ecommerce",
 	"pageTypes": ["home"],
 	"tags": {
