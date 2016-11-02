@@ -59,7 +59,7 @@
     "fontSwatch": {
        "title": "Helvetica",
         "font1": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-family": "\"Arial\", sans-serif",
             "font-size": "34px",
             "font-weight": "400",
             "line-height": "44px",
