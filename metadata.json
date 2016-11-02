@@ -59,10 +59,10 @@
     "fontSwatch": {
        "title": "Helvetica",
         "font1": {
-            "font-family": "\"Helvetica\", Arial, sans-serif",
-            "font-size": "32px",
-            "font-weight": "inherit",
-            "line-height": "42px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "34px",
+            "font-weight": "400",
+            "line-height": "44px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
