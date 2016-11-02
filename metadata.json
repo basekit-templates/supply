@@ -59,23 +59,23 @@
     "fontSwatch": {
        "title": "Helvetica",
         "font1": {
-            "font-family": "\"Helvetica\", Arial, sans-serif",
-            "font-size": "34px",
-            "font-weight": "inherit",
-            "line-height": "44px",
-            "color": "@color-swatch4",
-            "letter-spacing": "inherit"
-        },
-        "font2": {
-            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "32px",
             "font-weight": "inherit",
             "line-height": "42px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
+        "font2": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "28px",
+            "font-weight": "inherit",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
         "font3": {
-            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "24px",
             "font-weight": "inherit",
             "line-height": "34px",
