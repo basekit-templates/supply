@@ -75,9 +75,9 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-family": "\"Helvetica\", Arial, sans-serif",
             "font-size": "24px",
-            "font-weight": "inherit",
+            "font-weight": "400",
             "line-height": "34px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
