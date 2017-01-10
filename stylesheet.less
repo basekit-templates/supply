@@ -206,7 +206,8 @@ p,
 .contactform label,
 .signupform label,
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-select {
+select,
+.advancedcontactform label {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
 	color:@font-swatch5-color;
@@ -256,7 +257,8 @@ button.btn,
 .blog-search-form button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-summary-wrap .ecombasket-summary-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
-.widget.ecomcheckout .checkout-order-button {
+.widget.ecomcheckout .checkout-order-button,
+.advancedcontactform button {
 	display: inline-block;
 	cursor: pointer;
 	border: 1px solid @borders-buttons;
@@ -347,7 +349,9 @@ input[type=search],
 textarea,
 .contactform input,
 .contactform textarea,
-.widget.profile form fieldset input {
+.widget.profile form fieldset input,
+.advancedcontactform input,
+.advancedcontactform textarea {
 	text-indent: 0;
 	padding: 8px 9px 10px;
 	margin-bottom: 5px;
@@ -361,6 +365,23 @@ textarea,
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 	}
+}
+
+.advancedcontactform {
+    .select-wrap {
+        margin: 10px 0 0px;
+        display: inline-block;
+    }
+    .option-list {
+        margin: 0px 0 10px;
+    }
+    label {
+        width: 100%;
+        display: block;
+    }
+    select {
+    	margin-bottom: 0;
+    }
 }
 
 select::-ms-expand {
