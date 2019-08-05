@@ -1,5 +1,6 @@
 {
 	"name":"Supply",
+	"versionTenCompatible": 1,
 	"thumbnail":"thumbnail.png",
 	"screenshot":"supply-screenshot.jpg",
 	"templateType":"ecommerce",
