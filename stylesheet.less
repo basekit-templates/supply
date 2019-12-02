@@ -548,17 +548,16 @@ input[type="search"]::-webkit-search-decoration {
 	li > .text {
 		padding: 0;
 	}
-	ul li.folder-open ul {
-		border: solid 1px #ececec;
-		border-top-color: rgb(236, 236, 236);
-		border-top-style: solid;
-		border-top-width: 1px;
+	ul li.folder-open ul,
+	ul li:hover ul {
+		border: solid 1px @borders-blocks;
+		background-color: @background-blocks;
 		border-top: 0;
-		min-width: 180px;
-        max-width: 300px;
-        background-color: @color-swatch1;
 		top: 100%;
 		left: -1px;
+		min-width: 180px;
+        max-width: 300px;
+        background-color: @background-blocks;
 		display: block;
 		position: absolute;
 		z-index: 500;
@@ -568,25 +567,26 @@ input[type="search"]::-webkit-search-decoration {
 		@media @tablet {
 			margin: 16px 0 0;
             max-width: 100%;
-        }
-	}
-	ul li:hover ul,
-	ul li.folder-open ul {
-		border: solid 1px @borders-blocks;
-		background-color: @background-blocks;
-		border-top: 0;
-		top: 100%;
-		left: -1px;
-		@media @tablet {
-			top: 40px;
+            top: 40px;
 			left: 0;
-		}
-		a {
+        }
+
+        a {
 			padding: 8px 20px;
 
 			@media @tablet {
 				padding: 14px 20px 15px;
 			}
+		}
+	}
+	ul li:hover ul {
+		@media @tablet {
+			display: none;
+		}
+	}
+	ul li.folder-open ul {
+		@media @tablet {
+			display: block;
 		}
 	}
 	ul li a:hover, ul li.folder:hover > .text, ul li ul a:hover .text, ul li.folder .text:hover {
