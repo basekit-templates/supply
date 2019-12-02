@@ -548,14 +548,45 @@ input[type="search"]::-webkit-search-decoration {
 	li > .text {
 		padding: 0;
 	}
-	ul li:hover ul {
+	ul li.folder-open ul {
+		border: solid 1px #ececec;
+		border-top-color: rgb(236, 236, 236);
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-top: 0;
+		min-width: 180px;
+        max-width: 300px;
+        background-color: @color-swatch1;
+		top: 100%;
+		left: -1px;
+		display: block;
+		position: absolute;
+		z-index: 500;
+		padding: 0;
+		margin: 0 0 0;
+
+		@media @tablet {
+			margin: 16px 0 0;
+            max-width: 100%;
+        }
+	}
+	ul li:hover ul,
+	ul li.folder-open ul {
 		border: solid 1px @borders-blocks;
 		background-color: @background-blocks;
 		border-top: 0;
 		top: 100%;
 		left: -1px;
+		@media @tablet {
+			top: 40px;
+			left: 0;
+		}
 		a {
 			padding: 8px 20px;
+
+			@media @tablet {
+				padding: 14px 20px 15px;
+			}
 		}
 	}
 	ul li a:hover, ul li.folder:hover > .text, ul li ul a:hover .text, ul li.folder .text:hover {
